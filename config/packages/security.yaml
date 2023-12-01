@@ -23,7 +23,7 @@ security:
                 check_path: connexion
                 enable_csrf: true
             logout:
-                path: app_logout
+                path: logout
             login_throttling:
                 max_attempts: 3
                 interval: '5 minutes'
