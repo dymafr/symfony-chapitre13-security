@@ -12,9 +12,13 @@
   <body>
     <header style="display:flex;align-items:center;justify-content:space-between;">Ma super app
       <ul>
+        <a href="{{ path('connexion') }}">Connexion</a>
         <a href="{{ path('inscription') }}">Inscription</a>
       </ul>
     </header>
     {% block body %}{% endblock %}
+    {% for flash in app.flashes('success') %}
+      <h3>{{flash}}</h3>
+    {% endfor %}
   </body>
 </html>
